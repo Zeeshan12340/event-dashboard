@@ -28,6 +28,18 @@ body {
     color: rgb(60, 60, 60);
     opacity: 1; /* Firefox */
   }
+  
+  .menu-icon:hover {
+    fill: #5041BC;
+    transition: stroke 0.3s ease; /* Smooth transition */
+  }
+  .heart-icon {
+    stroke: #000000;
+    transition: stroke 0.3s ease; /* Smooth transition */
+   }
+   .heart-icon:hover {
+    stroke: #5041BC;
+   }
 }
 
 @layer utilities {
