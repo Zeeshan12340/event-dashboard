@@ -14,7 +14,6 @@ export default function Home() {
           <SideBar />
           <EventList />
         </div>
-        {/* <EventList /> */}
       </div>
     </Provider>
   );
