@@ -28,18 +28,43 @@ body {
     color: rgb(60, 60, 60);
     opacity: 1; /* Firefox */
   }
-  
+
   .menu-icon:hover {
-    fill: #5041BC;
+    fill: #5041bc;
     transition: stroke 0.3s ease; /* Smooth transition */
   }
   .heart-icon {
     stroke: #000000;
     transition: stroke 0.3s ease; /* Smooth transition */
-   }
-   .heart-icon:hover {
-    stroke: #5041BC;
-   }
+  }
+  .heart-icon:hover {
+    stroke: #5041bc;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30px 150px 150px 150px 150px;
+    grid-gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .grid-container-1 {
+    display: grid;
+    grid-template-columns: 30px 150px 150px 150px 150px;
+    grid-gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+
+  .grid-item {
+    /* Style your grid items as needed */
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 20px;
+  }
 }
 
 @layer utilities {

@@ -10,8 +10,11 @@ export default function Home() {
     <Provider store={store}>
       <div>
         <Header />
-        <SideBar />
-        <EventList />
+        <div className="flex">
+          <SideBar />
+          <EventList />
+        </div>
+        {/* <EventList /> */}
       </div>
     </Provider>
   );

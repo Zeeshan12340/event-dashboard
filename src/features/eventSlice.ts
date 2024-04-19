@@ -1,13 +1,25 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../app/store";
+import type { RootState } from "./store";
+
+interface entity {
+  entity_id: string;
+  name: string;
+  type: string;
+  formatted_address: string;
+}
+export interface entities {
+  [key: number]: entity;
+}
 
 // Define a type for event
-type Event = [{
-  id: string;
-  title: string;
-  description: string;
-  timezone: string;
-}]
+type Event = [
+  {
+    title: string;
+    start: string;
+    timezone: string;
+    entities: entities;
+  }
+];
 
 // Define a type for the slice state
 export interface EventState {
@@ -16,12 +28,14 @@ export interface EventState {
 
 // Define the initial state using that type
 const initialState: EventState = {
-  value: [{
-    id: "",
-    title: "",
-    description: "",
-    timezone: "",
-  }],
+  value: [
+    {
+      title: "",
+      start: "",
+      timezone: "",
+      entities: {},
+    },
+  ],
 };
 // as CounterState
 
@@ -33,12 +47,14 @@ export const eventSlice = createSlice({
       state.value = action.payload;
     },
     eClear: (state) => {
-      state.value = [{
-        id: "",
-        title: "",
-        description: "",
-        timezone: "",
-      }];
+      state.value = [
+        {
+          title: "",
+          start: "",
+          timezone: "",
+          entities: {},
+        },
+      ];
     },
   },
 });
