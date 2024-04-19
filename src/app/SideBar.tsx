@@ -3,7 +3,7 @@ export default function SideBar() {
     <div className="flex flex-col m-5 w-16 h-screen bg-white rounded-full">
       {/* menu icon */}
       <div
-        className="flex ml-2 mt-5 items-center justify-center bg-search-bg hover:bg-gray-200 rounded-full cursor-pointer h-16"
+        className="flex ml-3 mt-5 items-center justify-center bg-search-bg hover:bg-gray-200 rounded-full cursor-pointer h-16"
         style={{ width: "38px", height: "38px" }}
       >
         <svg
@@ -21,7 +21,7 @@ export default function SideBar() {
 
       {/* heart icon */}
       <div
-        className="flex ml-2 mt-4 items-center justify-center bg-search-bg hover:bg-gray-200 rounded-full cursor-pointer h-16"
+        className="flex ml-3 mt-4 items-center justify-center bg-search-bg hover:bg-gray-200 rounded-full cursor-pointer h-16"
         style={{ width: "38px", height: "38px" }}
       >
         <svg

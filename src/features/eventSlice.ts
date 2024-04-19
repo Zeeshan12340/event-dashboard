@@ -18,6 +18,7 @@ type Event = [
     start: string;
     timezone: string;
     entities: entities;
+    liked: boolean;
   }
 ];
 
@@ -34,6 +35,7 @@ const initialState: EventState = {
       start: "",
       timezone: "",
       entities: {},
+      liked: false,
     },
   ],
 };
@@ -46,6 +48,9 @@ export const eventSlice = createSlice({
     eUpdate: (state, action: PayloadAction<Event>) => {
       state.value = action.payload;
     },
+    eLike: (state, action: PayloadAction<number>) => {
+      state.value[action.payload].liked = !state.value[action.payload].liked;
+    },
     eClear: (state) => {
       state.value = [
         {
@@ -53,13 +58,14 @@ export const eventSlice = createSlice({
           start: "",
           timezone: "",
           entities: {},
+          liked: false,
         },
       ];
     },
   },
 });
 
-export const { eUpdate, eClear } = eventSlice.actions;
+export const { eUpdate, eLike, eClear } = eventSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectEvents = (state: RootState) => state.event.value;
