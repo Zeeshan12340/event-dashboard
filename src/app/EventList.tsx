@@ -3,7 +3,7 @@ import { entities } from "@/features/eventSlice";
 import { eLike } from "@/features/eventSlice";
 import { useEffect, useState } from "react";
 
-function convertToLocalTime(isoString: string, fullDate: boolean = false) {
+export function convertToLocalTime(isoString: string, fullDate: boolean = false) {
   console.log("isoString", isoString);
   const date = new Date(isoString);
 
@@ -118,7 +118,7 @@ export default function EventList() {
       <hr className="my-2 border-1 border-black" />
 
       {/* Event items */}
-      {events[0].title != "" ? (
+      {events[0].title ? (
         <div className="max-h-80 overflow-auto">
           {events.map(
             (
@@ -175,18 +175,18 @@ export default function EventList() {
       ) : null}
 
       {/* Event Stats */}
-      <div className="flex mt-10 justify-between gap-10">
-        <div className="text-left pl-8 pt-5 pb-16 flex-grow bg-white rounded-3xl">
+      <div className="flex mt-2 mb-10 justify-between gap-10">
+        <div className="text-left pl-8 pt-5 pb-12 flex-grow bg-white rounded-3xl">
           <div className="font-bold text-gray-500 text-sm pt-5">All Events</div>
           <div className="font-bold mt-2 text-3xl">{formatNumber(count)}</div>
         </div>
-        <div className="text-left pl-8 pt-5 pb-16 flex-grow bg-white rounded-3xl">
+        <div className="text-left pl-8 pt-5 pb-12 flex-grow bg-white rounded-3xl">
           <div className="font-bold text-gray-500 text-sm pt-5">
             This Month Events
           </div>
           <div className="font-bold mt-2 text-3xl">30</div>
         </div>
-        <div className="text-left pl-8 pt-5 pb-16 flex-grow bg-white rounded-3xl">
+        <div className="text-left pl-8 pt-5 pb-12 flex-grow bg-white rounded-3xl">
           <div className="font-bold text-gray-500 text-sm pt-5">
             Favourite Events
           </div>

@@ -46,7 +46,7 @@ body {
     display: grid;
     grid-template-columns: 30px 160px 120px 140px 230px;
     padding-left: 10px;
-    grid-gap: 20px;
+    grid-gap: 20px; 
     border-radius: 10px;
   }
   .grid-container-1 {
