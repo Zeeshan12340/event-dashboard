@@ -1,8 +1,8 @@
 import React, { use } from "react";
 import Image from "next/image";
 import { useAppSelector, useAppDispatch } from "@/features/hooks";
-import { qUpdate } from "@/features/querySlice";
-import { eUpdate } from "@/features/eventSlice";
+import { qUpdate, qFinish } from "@/features/querySlice";
+import { eUpdate, eClear } from "@/features/eventSlice";
 import { useEffect } from "react";
 
 export default function Header() {
@@ -15,6 +15,8 @@ export default function Header() {
 
   async function searchEvents(e?: React.FormEvent<HTMLFormElement>) {
     e?.preventDefault();
+    dispatch(eClear());
+    dispatch(qFinish(false));
 
     if (!query) {
       return;
@@ -29,6 +31,7 @@ export default function Header() {
     );
     const json = await data.json();
     dispatch(eUpdate(json.results));
+    dispatch(qFinish(true));
   }
 
   return (
