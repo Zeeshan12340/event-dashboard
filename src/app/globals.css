@@ -47,8 +47,8 @@ body {
   }
 
   .event-summary-height {
-    max-height: 45vh;
-    margin-bottom: 20px;
+    max-height: 40vh;
+    margin-bottom: 10px;
   }
 
   .event-card {

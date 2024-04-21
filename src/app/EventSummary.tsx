@@ -7,7 +7,7 @@ export default function EventSummary() {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="ml-5 mr-5 my-6 pl-2 pt-2 event-summary-container bg-white rounded-3xl">
+    <div className="ml-5 mr-5 mt-5 pl-2 pt-2 event-summary-container bg-white rounded-3xl">
       <div className="flex flex-wrap">
         <div className="ml-3 my-5 text-gray-900 w-full">Upcoming Events</div>
 
