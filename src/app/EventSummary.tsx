@@ -12,7 +12,7 @@ export default function EventSummary() {
         <div className="ml-3 my-5 text-gray-900 w-full">Upcoming Events</div>
 
         {/* event summary item */}
-        {events[0].title ? (
+        {events.length > 0 && events[0].title ? (
           <div className="w-full event-summary-height overflow-auto">
             {events.map(
               (

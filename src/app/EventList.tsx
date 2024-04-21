@@ -116,7 +116,7 @@ export default function EventList() {
       <hr className="my-2 border-1 border-black" />
 
       {/* Event items */}
-      {events[0].title ? (
+      {events.length > 0 && events[0].title ? (
         <div className="max-h-80 overflow-auto">
           {events.map(
             (
