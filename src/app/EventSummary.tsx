@@ -7,13 +7,13 @@ export default function EventSummary() {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="ml-5 mr-10 my-6 pl-2 pt-2 bg-white w-full rounded-3xl">
+    <div className="ml-5 mr-5 my-6 pl-2 pt-2 event-summary-container bg-white rounded-3xl">
       <div className="flex flex-wrap">
         <div className="ml-3 my-5 text-gray-900 w-full">Upcoming Events</div>
 
         {/* event summary item */}
         {events[0].title ? (
-          <div className="w-full max-h-72 overflow-auto">
+          <div className="w-full event-summary-height overflow-auto">
             {events.map(
               (
                 event: {
@@ -23,7 +23,7 @@ export default function EventSummary() {
                 },
                 index
               ) => (
-                <div className="flex flex-col ml-2 mr-7 mb-2">
+                <div key={index} className="flex flex-col ml-2 mr-7 mb-2">
                   <div className="flex flex-row pl-2 border border-gray-100 rounded-lg w-full">
                     <div className="py-2 w-full">
                       <div className="text-sm font-bold text-gray-600">
@@ -40,8 +40,8 @@ export default function EventSummary() {
                       fill={event.liked ? "red" : "none"}
                       stroke={event.liked ? "red" : "#5041bc"}
                       strokeWidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="feather feather-heart w-10 mt-1 cursor-pointer"
                       onClick={() => {
                         dispatch(eLike(index));

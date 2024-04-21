@@ -5,6 +5,7 @@ import { store } from "@/features/store";
 import EventList from "./EventList";
 import SideBar from "./SideBar";
 import EventSummary from "./EventSummary";
+import EventCard from "./EventCard";
 
 export default function Home() {
   return (
@@ -14,7 +15,10 @@ export default function Home() {
         <div className="flex">
           <SideBar />
           <EventList />
-          <EventSummary />
+          <div>
+            <EventSummary />
+            <EventCard />
+          </div>
         </div>
       </div>
     </Provider>

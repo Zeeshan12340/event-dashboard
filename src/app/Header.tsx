@@ -1,15 +1,20 @@
-import React from "react";
+import React, { use } from "react";
 import Image from "next/image";
 import { useAppSelector, useAppDispatch } from "@/features/hooks";
 import { qUpdate } from "@/features/querySlice";
 import { eUpdate } from "@/features/eventSlice";
+import { useEffect } from "react";
 
 export default function Header() {
   const query = useAppSelector((state) => state.query.value);
   const dispatch = useAppDispatch();
 
-  async function searchEvents(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  useEffect(() => {
+    searchEvents();
+  }, []);
+
+  async function searchEvents(e?: React.FormEvent<HTMLFormElement>) {
+    e?.preventDefault();
 
     if (!query) {
       return;
@@ -30,7 +35,7 @@ export default function Header() {
     <header className="flex p-4 text-white bg-white">
       {/* logo image */}
       <Image
-        className="ml-4 mr-20"
+        className="ml-4 mr-20 object-contain"
         src="/logo.svg"
         alt="logo"
         width={40}
@@ -50,9 +55,9 @@ export default function Header() {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
               />
             </svg>
