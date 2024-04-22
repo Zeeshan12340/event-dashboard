@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import Image from "next/image";
 import { useAppSelector, useAppDispatch } from "@/features/hooks";
 import { qUpdate, qFinish } from "@/features/querySlice";
@@ -11,7 +11,7 @@ export default function Header() {
 
   useEffect(() => {
     searchEvents();
-  }, []);
+  });
 
   async function searchEvents(e?: React.FormEvent<HTMLFormElement>) {
     e?.preventDefault();

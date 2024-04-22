@@ -1,7 +1,7 @@
 import { useAppSelector, useAppDispatch } from "@/features/hooks";
 import { entities } from "@/features/eventSlice";
-import { eLike, eOpen, eClose } from "@/features/eventSlice";
-import React, { ReactEventHandler, useEffect, useState } from "react";
+import { eLike, eOpen, eClose, eClear } from "@/features/eventSlice";
+import React, { useEffect, useState } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
 import { Modal, Box, Typography } from "@mui/material";
 
@@ -79,11 +79,11 @@ export default function EventList() {
       })
         .then((data) => data.json())
         .then((json) => setCount(json.count))
-        .catch((error) => console.error("Error:", error));
+        .catch(() => dispatch(eClear()));
     }
 
     fetchEvents();
-  }, []);
+  });
 
   const handleOpen = (index: number) => {
     dispatch(eOpen(index));
@@ -196,7 +196,7 @@ export default function EventList() {
                 },
                 index
               ) => (
-                <div>
+                <div key={index}>
                   <Modal
                     open={event.open}
                     onClose={() => handleClose(index)}
