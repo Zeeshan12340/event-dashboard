@@ -1,5 +1,5 @@
 import { useAppSelector, useAppDispatch } from "@/features/hooks";
-import { convertToLocalTime } from "./EventList";
+import { convertToLocalTime } from "./utils";
 import { eLike } from "@/features/eventSlice";
 
 export default function EventSummary() {
