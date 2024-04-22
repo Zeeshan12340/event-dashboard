@@ -86,16 +86,11 @@ export default function EventList() {
   }, []);
 
   const handleOpen = (index: number) => {
-    console.log("open", index);
     dispatch(eOpen(index));
-    console.log("event.open", events[index].open);
   };
 
   const handleClose = (index: number) => {
-    console.log("close", index);
-    console.log("event.open before close", events[index].open);
     dispatch(eClose(index));
-    console.log("event.open after close", events[index].open);
   };
 
   return (
