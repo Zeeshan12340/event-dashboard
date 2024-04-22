@@ -19,6 +19,8 @@ export default function Header() {
     dispatch(qFinish(false));
 
     if (!query) {
+      dispatch(qFinish(true));
+      dispatch(eClear());
       return;
     }
     const data = await fetch(

@@ -83,7 +83,7 @@ export default function EventList() {
     }
 
     fetchEvents();
-  });
+  }, [dispatch]);
 
   const handleOpen = (index: number) => {
     dispatch(eOpen(index));
