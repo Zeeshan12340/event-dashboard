@@ -26,7 +26,7 @@ export default function EventSummary() {
                 <div key={index} className="flex flex-col ml-2 mr-7 mb-2">
                   <div className="flex flex-row pl-2 border border-gray-100 rounded-lg w-full">
                     <div className="py-2 w-full">
-                      <div className="text-sm font-bold text-gray-600">
+                      <div className="text-sm font-bold text-gray-600 mr-4">
                         {event.title}
                       </div>
                       <div className="text-xs">
