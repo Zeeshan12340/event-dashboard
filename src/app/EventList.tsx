@@ -55,7 +55,7 @@ const modalStyle = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 700,
-  height: 300,
+  height: 350,
   bgcolor: "background.paper",
   border: "0px solid #000",
   borderRadius: 5,
@@ -218,11 +218,14 @@ export default function EventList() {
                         Category: <span className="font-bold">AI</span>
                       </div>
                       <div className="my-2 text-xl">Description</div>
-                      <Typography id="modal-modal-description" className="min-h-20 text-gray-500">
+                      <Typography
+                        id="modal-modal-description"
+                        className="min-h-40 max-h-40 text-gray-500 overflow-auto"
+                      >
                         {event.description}
                       </Typography>
-                      <hr className="my-2 border-1 border-black" />
-                      <div className="mt-4 flex items-center justify-center text-xl">
+                      <hr className="mt-4 border-1 border-black" />
+                      <div className="flex items-center justify-center text-xl mt-2">
                         <svg
                           className="mr-2"
                           width="14"
@@ -241,9 +244,7 @@ export default function EventList() {
                             {event.entities[0].name}
                           </div>
                         ) : (
-                          <div className="text-gray-700">
-                            {event.timezone}
-                          </div>
+                          <div className="text-gray-700">{event.timezone}</div>
                         )}
                       </div>
                     </Box>

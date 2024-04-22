@@ -76,14 +76,14 @@ body {
   
   .grid-container {
     display: grid;
-    grid-template-columns: 30px 160px 120px 140px 230px;
+    grid-template-columns: 30px 180px 110px 130px 230px;
     padding-left: 10px;
     grid-gap: 20px;
     border-radius: 10px;
   }
   .grid-container-1 {
     display: grid;
-    grid-template-columns: 30px 160px 120px 140px 230px;
+    grid-template-columns: 30px 180px 110px 130px 230px;
     grid-gap: 20px;
     padding: 10px;
     margin-top: 20px;
