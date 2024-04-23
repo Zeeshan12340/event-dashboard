@@ -1,4 +1,4 @@
-import React, { SetStateAction } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Popper, { PopperPlacementType } from "@mui/material/Popper";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -10,8 +10,6 @@ export default function EventFilter() {
   const [placement, setPlacement] = React.useState<PopperPlacementType>();
   const open = Boolean(anchorEl);
   const [categorySelect, setcategorySelect] = React.useState("Web Development");
-  const [fromDate, setFromdDate] = React.useState<Date | null>(null);
-  const [toDate, setToDate] = React.useState<Date | null>(null);
 
   const handleClick = (newPlacement: PopperPlacementType) => (
     event: React.MouseEvent<HTMLElement>
@@ -23,14 +21,6 @@ export default function EventFilter() {
   function handleChange(event: SelectChangeEvent) {
     setcategorySelect(event.target.value);
   }
-
-  const handleFromChange = (date: Date | null) => {
-    setFromdDate(date);
-  };
-
-  const handleToChange = (date: Date | null) => {
-    setToDate(date);
-  };
 
   return (
     <div>
