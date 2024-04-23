@@ -22,8 +22,7 @@ export default function EventList() {
         },
       })
         .then((data) => data.json())
-        .then((json) => setCount(json.count))
-        .catch(() => dispatch(eClear()));
+        .then((json) => setCount(json.count));
     }
 
     fetchEvents();
@@ -87,105 +86,85 @@ export default function EventList() {
                   open: boolean;
                 },
                 index
-              ) => 
+              ) =>
                 page.likedEvents ? (
                   event.liked ? (
-                <div key={index}>
-                  <EventModal event={event} index={index} />
-                  <div
-                    key={index}
-                    className="grid-container-1 cursor-pointer"
-                    onClick={() => handleOpen(index)}
-                  >
-                    <div className="grid-item font-bold">0{index + 1}</div>
-                    <div className="grid-item text-gray-700">{event.title}</div>
-                    <div className="grid-item font-bold text-gray-500">
-                      {convertToLocalTime(event.start)}
-                    </div>
-                    <div className="grid-item font-bold text-gray-500">
-                      {convertToLocalTime(event.start, true)}
-                    </div>
-                    <div className="flex justify-between">
-                      {event.entities[0] ? (
+                    <div key={index}>
+                      <EventModal event={event} index={index} />
+                      <div
+                        key={index}
+                        className="grid-container-1 cursor-pointer"
+                        onClick={() => handleOpen(index)}
+                      >
+                        <div className="grid-item font-bold">0{index + 1}</div>
                         <div className="grid-item text-gray-700">
-                          {event.entities[0].name}
+                          {event.title}
                         </div>
-                      ) : (
-                        <div className="grid-item text-gray-700">
-                          {event.timezone}
+                        <div className="grid-item font-bold text-gray-500">
+                          {convertToLocalTime(event.start)}
                         </div>
-                      )}
-                      <div className="w-10 h-10">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          fill={event.liked ? "red" : "none"}
-                          stroke={event.liked ? "red" : "#5041bc"}
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="feather feather-heart cursor-pointer"
-                          onClick={(event) => {
-                            dispatch(eLike(index));
-                            event.stopPropagation();
-                          }}
-                        >
-                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
+                        <div className="grid-item font-bold text-gray-500">
+                          {convertToLocalTime(event.start, true)}
+                        </div>
+                        <div className="flex justify-between">
+                          {event.entities[0] ? (
+                            <div className="grid-item text-gray-700">
+                              {event.entities[0].name}
+                            </div>
+                          ) : (
+                            <div className="grid-item text-gray-700">
+                              {event.timezone}
+                            </div>
+                          )}
+                          <div className="w-10 h-10">
+                            {/* prettier-ignore */}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill={event.liked ? "red" : "none"} stroke={event.liked ? "red" : "#5041bc"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-heart cursor-pointer" onClick={(event) => { dispatch(eLike(index)); event.stopPropagation(); }}>
+                              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>) : null
+                  ) : null
                 ) : (
                   <div key={index}>
-                  <EventModal event={event} index={index} />
-                  <div
-                    key={index}
-                    className="grid-container-1 cursor-pointer"
-                    onClick={() => handleOpen(index)}
-                  >
-                    <div className="grid-item font-bold">0{index + 1}</div>
-                    <div className="grid-item text-gray-700">{event.title}</div>
-                    <div className="grid-item font-bold text-gray-500">
-                      {convertToLocalTime(event.start)}
-                    </div>
-                    <div className="grid-item font-bold text-gray-500">
-                      {convertToLocalTime(event.start, true)}
-                    </div>
-                    <div className="flex justify-between">
-                      {event.entities[0] ? (
-                        <div className="grid-item text-gray-700">
-                          {event.entities[0].name}
+                    <EventModal event={event} index={index} />
+                    <div
+                      key={index}
+                      className="grid-container-1 cursor-pointer"
+                      onClick={() => handleOpen(index)}
+                    >
+                      <div className="grid-item font-bold">0{index + 1}</div>
+                      <div className="grid-item text-gray-700">
+                        {event.title}
+                      </div>
+                      <div className="grid-item font-bold text-gray-500">
+                        {convertToLocalTime(event.start)}
+                      </div>
+                      <div className="grid-item font-bold text-gray-500">
+                        {convertToLocalTime(event.start, true)}
+                      </div>
+                      <div className="flex justify-between">
+                        {event.entities[0] ? (
+                          <div className="grid-item text-gray-700">
+                            {event.entities[0].name}
+                          </div>
+                        ) : (
+                          <div className="grid-item text-gray-700">
+                            {event.timezone}
+                          </div>
+                        )}
+                        <div className="w-10 h-10">
+                          {/* prettier-ignore */}
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill={event.liked ? "red" : "none"} stroke={event.liked ? "red" : "#5041bc"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-heart cursor-pointer" onClick={(event) => { dispatch(eLike(index)); event.stopPropagation(); }}>
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                          </svg>
                         </div>
-                      ) : (
-                        <div className="grid-item text-gray-700">
-                          {event.timezone}
-                        </div>
-                      )}
-                      <div className="w-10 h-10">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 32 32"
-                          fill={event.liked ? "red" : "none"}
-                          stroke={event.liked ? "red" : "#5041bc"}
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="feather feather-heart cursor-pointer"
-                          onClick={(event) => {
-                            dispatch(eLike(index));
-                            event.stopPropagation();
-                          }}
-                        >
-                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
                       </div>
                     </div>
                   </div>
-                </div>
                 )
-              )
-            }
+            )}
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center m-20">

@@ -33,10 +33,6 @@ body {
     fill: #5041bc;
     transition: stroke 0.3s ease; /* Smooth transition */
   }
-  .heart-icon {
-    stroke: #000000;
-    transition: stroke 0.3s ease; /* Smooth transition */
-  }
   .heart-icon:hover {
     stroke: #5041bc;
     color: #5041bc;
