@@ -1,6 +1,6 @@
 import { useAppSelector, useAppDispatch } from "@/features/hooks";
 import { entities } from "@/features/eventSlice";
-import { eLike, eOpen, eClear } from "@/features/eventSlice";
+import { eLike, eOpen } from "@/features/eventSlice";
 import React, { useEffect, useState } from "react";
 import BounceLoader from "react-spinners/BounceLoader";
 import EventModal from "./EventModal";
