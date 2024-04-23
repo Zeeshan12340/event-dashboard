@@ -1,10 +1,16 @@
+import { useAppDispatch } from "@/features/hooks";
+import { expandEvents, likedEvents } from "@/features/pageSlice";
+
 export default function SideBar() {
+  const dispatch = useAppDispatch();
+
   return (
     <div className="flex flex-col m-6 w-18 p-2 h-screen bg-white rounded-full">
       {/* menu icon */}
       <div
         className="flex mt-5 items-center justify-center bg-search-bg hover:bg-gray-200 rounded-full cursor-pointer h-16"
         style={{ width: "38px", height: "38px" }}
+        onClick={() => dispatch(expandEvents())}
       >
         <svg
           className="menu-icon"
@@ -23,6 +29,7 @@ export default function SideBar() {
       <div
         className="flex mt-4 items-center justify-center bg-search-bg hover:bg-gray-200 rounded-full cursor-pointer h-16"
         style={{ width: "38px", height: "38px" }}
+        onClick={() => dispatch(likedEvents())}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

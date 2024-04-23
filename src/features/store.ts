@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import queryReducer from '../features/querySlice'
 import eventReducer from '../features/eventSlice'
+import pageReducer from '../features/pageSlice'
 
 export const store = configureStore({
   reducer: {
     query: queryReducer,
-    event: eventReducer
+    event: eventReducer,
+    page: pageReducer,
   }
 })
 

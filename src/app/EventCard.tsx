@@ -1,6 +1,13 @@
+import { useAppSelector } from "@/features/hooks";
 import Image from "next/image";
 
 export default function EventCard() {
+  const page = useAppSelector((state) => state.page);
+
+  if (page.expandEvents) {
+    return null;
+  }
+
   return (
     <div className="event-card">
       <div className="flex w-full">
