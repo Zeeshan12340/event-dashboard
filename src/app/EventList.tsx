@@ -102,7 +102,7 @@ export default function EventList() {
                     <div className="grid-item font-bold text-gray-500">
                       {convertToLocalTime(event.start, true)}
                     </div>
-                    <div className="flex">
+                    <div className="flex justify-between">
                       {event.entities[0] ? (
                         <div className="grid-item text-gray-700">
                           {event.entities[0].name}
@@ -112,7 +112,7 @@ export default function EventList() {
                           {event.timezone}
                         </div>
                       )}
-                      <div className="w-8 h-6 ml-auto flex-shrink-0">
+                      <div className="w-10 h-10">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 32 32"

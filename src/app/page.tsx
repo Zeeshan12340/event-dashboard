@@ -14,7 +14,9 @@ export default function Home() {
         <Header />
         <div className="flex">
           <SideBar />
-          <EventList />
+          <div className="w-full mr-2">
+            <EventList />
+          </div>
           <div>
             <EventSummary />
             <EventCard />
