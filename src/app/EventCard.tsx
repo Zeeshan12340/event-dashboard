@@ -28,7 +28,7 @@ export default function EventCard() {
           />
         </svg>
       </div>
-      <div className="bg-white rounded-lg w-full mb-12 p-3">
+      <div className="bg-white rounded-lg w-full p-3">
         <div className="flex w-full">
           <div className="w-full">
             <div className="font-bold text-blue-800">Web Development</div>
