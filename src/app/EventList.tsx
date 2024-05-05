@@ -16,7 +16,7 @@ export default function EventList() {
 
   useEffect(() => {
     function fetchEvents() {
-      fetch("https://api.predicthq.com/v1/events/count/", {
+      fetch("https://api.predicthq.com/v1/events/count/?saved_location.location_id=XW6x9BeMZeAv74Fxk79n5A", {
         headers: {
           Authorization: "Bearer " + process.env.NEXT_PUBLIC_PREDICTHQ_API_KEY,
         },

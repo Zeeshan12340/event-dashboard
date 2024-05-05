@@ -24,7 +24,7 @@ export default function Header() {
       return;
     }
     const data = await fetch(
-      "https://api.predicthq.com/v1/events/?q=" + query,
+      "https://api.predicthq.com/v1/events/?saved_location.location_id=XW6x9BeMZeAv74Fxk79n5A&q=" + query,
       {
         headers: {
           Authorization: "Bearer " + process.env.NEXT_PUBLIC_PREDICTHQ_API_KEY,
