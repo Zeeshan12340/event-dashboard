@@ -26,7 +26,7 @@ export default function EventSummary() {
                   start: string;
                   liked: boolean;
                 },
-                index
+                index: number
               ) =>
                 page.likedEvents ? (
                   event.liked ? (
