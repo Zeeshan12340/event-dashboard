@@ -12,17 +12,18 @@ export interface entities {
 }
 
 // Define a type for event
-type Event = [
-  {
-    title: string;
-    start: string;
-    timezone: string;
-    entities: entities;
-    description: string;
-    liked: boolean;
-    open: boolean;
-  }
-];
+// type Event = [
+//   {
+//     title: string;
+//     start: string;
+//     timezone: string;
+//     entities: entities;
+//     description: string;
+//     liked: boolean;
+//     open: boolean;
+//   }
+// ];
+type Event = any;
 
 // Define a type for the slice state
 export interface EventState {

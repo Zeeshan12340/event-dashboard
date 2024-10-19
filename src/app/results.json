@@ -1,0 +1,1216 @@
+[{
+  
+  "id": "AqCvqVYnaZ8Yp5FUTQ",
+  "title": "Magic Mike Live",
+  "description": "Sourced from predicthq.com",
+  "category": "performing-arts",
+  "labels": [
+    "entertainment",
+    "performing-arts"
+  ],
+  "rank": 43,
+  "local_rank": 50,
+  "phq_attendance": 426,
+  "entities": [
+    {
+      "entity_id": "rvyyag4XKXRaKepi3Q2rdZ",
+      "name": "Hippodrome Casino",
+      "type": "venue",
+      "formatted_address": "Cranbourn Street, WC2H 7JH, United Kingdom"
+    }
+  ],
+  "duration": 0,
+  "start": "2025-01-16T21:30:00Z",
+  "start_local": "2025-01-16T21:30:00",
+  "end": "2025-01-16T21:30:00Z",
+  "end_local": "2025-01-16T21:30:00",
+  "predicted_end": "2025-01-16T22:40:00Z",
+  "predicted_end_local": "2025-01-16T22:40:00",
+  "updated": "2024-09-09T00:52:40Z",
+  "first_seen": "2024-03-27T00:32:49Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.128551,
+    51.511403
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.128551,
+        51.511403
+      ],
+      "type": "Point"
+    },
+    "placekey": "zzy-22z@4hq-8mp-ht9",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "Cranbourn Street, WC2H 7JH, United Kingdom",
+      "postcode": "WC2H 7JH",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 426,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-15",
+          "value": 120,
+          "position": "leading"
+        },
+        {
+          "date_local": "2025-01-16",
+          "value": 426,
+          "position": "event_day"
+        },
+        {
+          "date_local": "2025-01-17",
+          "value": 5,
+          "position": "lagging"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 426,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 15552,
+  "predicted_event_spend_industries": {
+    "accommodation": 2026,
+    "hospitality": 8225,
+    "transportation": 5301
+  },
+  "phq_labels": [
+    {
+      "label": "family-theatre",
+      "weight": 0.643
+    },
+    {
+      "label": "general-theatre",
+      "weight": 0.357
+    }
+  ]
+},
+{
+  
+  "id": "6RfstPnDBaPWZTchig",
+  "title": "SIX The Musical",
+  "description": "Sourced from predicthq.com",
+  "category": "performing-arts",
+  "labels": [
+    "entertainment",
+    "music",
+    "performing-arts"
+  ],
+  "rank": 37,
+  "local_rank": 44,
+  "phq_attendance": 222,
+  "entities": [
+    {
+      "entity_id": "V7ZMh2c9ac44vN2BCXu9Cb",
+      "name": "Vaudeville Theatre",
+      "type": "venue",
+      "formatted_address": "404 Strand, London WC2R 0NH, UK"
+    }
+  ],
+  "duration": 0,
+  "start": "2025-01-16T20:00:00Z",
+  "start_local": "2025-01-16T20:00:00",
+  "end": "2025-01-16T20:00:00Z",
+  "end_local": "2025-01-16T20:00:00",
+  "predicted_end": "2025-01-16T21:50:00Z",
+  "predicted_end_local": "2025-01-16T21:50:00",
+  "updated": "2024-09-19T04:18:18Z",
+  "first_seen": "2024-04-13T00:28:56Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.122507,
+    51.510394
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.122507,
+        51.510394
+      ],
+      "type": "Point"
+    },
+    "placekey": "zzy-22w@4hh-zvh-7t9",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "404 Strand, London WC2R 0NH, UK",
+      "postcode": "WC2R 0NH",
+      "locality": "London",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 222,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 222,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 222,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 5639,
+  "predicted_event_spend_industries": {
+    "accommodation": 0,
+    "hospitality": 3429,
+    "transportation": 2210
+  }
+},
+{
+  
+  "id": "6XGmW5TGTNqLKUVsEy",
+  "title": "Beethoven Piano Trios by Candlelight",
+  "description": "Sourced from predicthq.com - Enjoy an outstanding candlelit evening of classical music in the beautiful setting of St Mary Le Strand Church.",
+  "category": "performing-arts",
+  "labels": [
+    "concert",
+    "music",
+    "performing-arts"
+  ],
+  "rank": 29,
+  "local_rank": 36,
+  "phq_attendance": 88,
+  "entities": [],
+  "duration": 3600,
+  "start": "2025-01-16T20:00:00Z",
+  "start_local": "2025-01-16T20:00:00",
+  "end": "2025-01-16T21:00:00Z",
+  "end_local": "2025-01-16T21:00:00",
+  "updated": "2024-08-15T17:02:18Z",
+  "first_seen": "2024-08-15T17:02:00Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.1168058,
+    51.5120602
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.1168058,
+        51.5120602
+      ],
+      "type": "Point"
+    },
+    "placekey": "@4hh-zvh-8sq",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "London WC2R 1HL, United Kingdom",
+      "locality": "London",
+      "postcode": "WC2R 1HL",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 88,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 88,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 88,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "3333138",
+      "2646781"
+    ],
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 2172,
+  "predicted_event_spend_industries": {
+    "accommodation": 0,
+    "hospitality": 1321,
+    "transportation": 851
+  },
+  "phq_labels": [
+    {
+      "label": "concert",
+      "weight": 0.86
+    },
+    {
+      "label": "lifestyle",
+      "weight": 0.14
+    }
+  ]
+},
+{
+  
+  "id": "92nPwrjE7y22eGJNG4",
+  "title": "Bill Bailey: Thoughtifier",
+  "description": "Sourced from predicthq.com",
+  "category": "performing-arts",
+  "labels": [
+    "comedy",
+    "entertainment",
+    "performing-arts"
+  ],
+  "rank": 39,
+  "local_rank": 46,
+  "phq_attendance": 284,
+  "entities": [
+    {
+      "entity_id": "7ELkMtw5iDrz6xxBrXF28z",
+      "name": "Theatre Royal Haymarket",
+      "type": "venue",
+      "formatted_address": "18 Suffolk Street, London SW1Y 4HT, United Kingdom"
+    }
+  ],
+  "duration": 0,
+  "start": "2025-01-16T20:00:00Z",
+  "start_local": "2025-01-16T20:00:00",
+  "end": "2025-01-16T20:00:00Z",
+  "end_local": "2025-01-16T20:00:00",
+  "predicted_end": "2025-01-16T21:50:00Z",
+  "predicted_end_local": "2025-01-16T21:50:00",
+  "updated": "2024-08-22T13:30:50Z",
+  "first_seen": "2024-05-16T00:36:14Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.1315554,
+    51.5085064
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.1315554,
+        51.5085064
+      ],
+      "type": "Point"
+    },
+    "placekey": "22z-222@4hq-8mp-f75",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "18 Suffolk Street, London SW1Y 4HT, United Kingdom",
+      "postcode": "SW1Y 4HT",
+      "locality": "London",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 284,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 284,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 284,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 7012,
+  "predicted_event_spend_industries": {
+    "accommodation": 0,
+    "hospitality": 4264,
+    "transportation": 2748
+  },
+  "phq_labels": [
+    {
+      "label": "comedy-club",
+      "weight": 1
+    }
+  ]
+},
+{
+  
+  "id": "H6M95ms5ZCceWWJjec",
+  "title": "Thursday Stand Up Comedy Club, Leicester Square",
+  "description": "Sourced from predicthq.com - International stand up comedy showcase",
+  "category": "performing-arts",
+  "labels": [
+    "concert",
+    "music",
+    "performing-arts"
+  ],
+  "rank": 31,
+  "local_rank": 38,
+  "phq_attendance": 109,
+  "entities": [],
+  "duration": 8100,
+  "start": "2025-01-16T20:00:00Z",
+  "start_local": "2025-01-16T20:00:00",
+  "end": "2025-01-16T22:15:00Z",
+  "end_local": "2025-01-16T22:15:00",
+  "updated": "2024-10-12T14:16:43Z",
+  "first_seen": "2024-10-12T14:16:15Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.1326521,
+    51.508968
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.1326521,
+        51.508968
+      ],
+      "type": "Point"
+    },
+    "placekey": "23h-222@4hq-8mp-k4v",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "Haymarket, London SW1Y 4QX, United Kingdom",
+      "locality": "London",
+      "postcode": "SW1Y 4QX",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 109,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 109,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 109,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 2768,
+  "predicted_event_spend_industries": {
+    "accommodation": 0,
+    "hospitality": 1683,
+    "transportation": 1085
+  },
+  "phq_labels": [
+    {
+      "label": "comedy-club",
+      "weight": 0.778
+    },
+    {
+      "label": "lifestyle",
+      "weight": 0.222
+    }
+  ]
+},
+{
+  
+  "id": "49q92enEyDP2AKnshu",
+  "title": "Hamilton",
+  "alternate_titles": [
+    "Wicked"
+  ],
+  "description": "Sourced from predicthq.com",
+  "category": "performing-arts",
+  "labels": [
+    "entertainment",
+    "music",
+    "performing-arts"
+  ],
+  "rank": 53,
+  "local_rank": 61,
+  "phq_attendance": 1418,
+  "entities": [
+    {
+      "entity_id": "e76iUPpZJDrTHMkxbvut4t",
+      "name": "Apollo Victoria Theatre",
+      "type": "venue",
+      "formatted_address": "17 Wilton Road, London SW1V 1LG, United Kingdom"
+    }
+  ],
+  "duration": 0,
+  "start": "2025-01-16T19:30:00Z",
+  "start_local": "2025-01-16T19:30:00",
+  "end": "2025-01-16T19:30:00Z",
+  "end_local": "2025-01-16T19:30:00",
+  "predicted_end": "2025-01-16T21:20:00Z",
+  "predicted_end_local": "2025-01-16T21:20:00",
+  "updated": "2024-09-25T01:13:37Z",
+  "first_seen": "2024-03-25T04:52:16Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.1424401,
+    51.4957526
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.1424401,
+        51.4957526
+      ],
+      "type": "Point"
+    },
+    "placekey": "22k-223@4hh-zsz-v4v",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "17 Wilton Road, London SW1V 1LG, United Kingdom",
+      "postcode": "SW1V 1LG",
+      "locality": "London",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-15",
+          "value": 213,
+          "position": "leading"
+        },
+        {
+          "date_local": "2025-01-16",
+          "value": 1418,
+          "position": "event_day"
+        },
+        {
+          "date_local": "2025-01-17",
+          "value": 142,
+          "position": "lagging"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-15",
+          "value": 398,
+          "position": "leading"
+        },
+        {
+          "date_local": "2025-01-16",
+          "value": 1418,
+          "position": "event_day"
+        },
+        {
+          "date_local": "2025-01-17",
+          "value": 15,
+          "position": "lagging"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 1418,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "3333218",
+      "6690579"
+    ],
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 56334,
+  "predicted_event_spend_industries": {
+    "accommodation": 3372,
+    "hospitality": 35451,
+    "transportation": 17510
+  }
+},
+{
+  
+  "id": "4uzCfwjHpqwandhQGU",
+  "title": "Mean Girls",
+  "description": "Sourced from predicthq.com",
+  "category": "performing-arts",
+  "labels": [
+    "entertainment",
+    "music",
+    "performing-arts"
+  ],
+  "rank": 41,
+  "local_rank": 48,
+  "phq_attendance": 367,
+  "entities": [
+    {
+      "entity_id": "cwh5TEd7KW7qJHp9sY6789",
+      "name": "Savoy Theatre, London",
+      "type": "venue",
+      "formatted_address": "Strand, London WC2R0ET, United Kingdom"
+    }
+  ],
+  "duration": 0,
+  "start": "2025-01-16T19:30:00Z",
+  "start_local": "2025-01-16T19:30:00",
+  "end": "2025-01-16T19:30:00Z",
+  "end_local": "2025-01-16T19:30:00",
+  "predicted_end": "2025-01-16T21:20:00Z",
+  "predicted_end_local": "2025-01-16T21:20:00",
+  "updated": "2024-09-29T01:32:23Z",
+  "first_seen": "2024-03-30T00:50:40Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.1194006,
+    51.5111922
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.1194006,
+        51.5111922
+      ],
+      "type": "Point"
+    },
+    "placekey": "1nrikmlsin@4hh-zvh-6c5",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "Strand, London WC2R0ET, United Kingdom",
+      "postcode": "WC2R0ET",
+      "locality": "London"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 367,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-15",
+          "value": 103,
+          "position": "leading"
+        },
+        {
+          "date_local": "2025-01-16",
+          "value": 367,
+          "position": "event_day"
+        },
+        {
+          "date_local": "2025-01-17",
+          "value": 4,
+          "position": "lagging"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 367,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 12525,
+  "predicted_event_spend_industries": {
+    "accommodation": 872,
+    "hospitality": 7086,
+    "transportation": 4566
+  }
+},
+{
+  
+  "id": "5rC2ZF7YvkdCcWtSoc",
+  "title": "The Play That Goes Wrong",
+  "description": "Sourced from predicthq.com",
+  "category": "performing-arts",
+  "labels": [
+    "comedy",
+    "entertainment",
+    "performing-arts"
+  ],
+  "rank": 37,
+  "local_rank": 45,
+  "phq_attendance": 234,
+  "entities": [
+    {
+      "entity_id": "333ATNNn4CgcL5RVUCuhtsb",
+      "name": "Duchess Theatre",
+      "type": "venue",
+      "formatted_address": "3-5 Catherine St, London WC2B 5LA, UK"
+    }
+  ],
+  "duration": 0,
+  "start": "2025-01-16T19:30:00Z",
+  "start_local": "2025-01-16T19:30:00",
+  "end": "2025-01-16T19:30:00Z",
+  "end_local": "2025-01-16T19:30:00",
+  "predicted_end": "2025-01-16T21:20:00Z",
+  "predicted_end_local": "2025-01-16T21:20:00",
+  "updated": "2024-06-11T01:22:34Z",
+  "first_seen": "2024-03-25T06:49:06Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.1196697,
+    51.5122266
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.1196697,
+        51.5122266
+      ],
+      "type": "Point"
+    },
+    "placekey": "zzy-22j@4hh-zvh-8y9",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "3-5 Catherine St, London WC2B 5LA, UK",
+      "postcode": "WC2B 5LA",
+      "locality": "London",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 234,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 234,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 234,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 5778,
+  "predicted_event_spend_industries": {
+    "accommodation": 0,
+    "hospitality": 3513,
+    "transportation": 2264
+  },
+  "phq_labels": [
+    {
+      "label": "comedy-club",
+      "weight": 0.663
+    },
+    {
+      "label": "general-theatre",
+      "weight": 0.337
+    }
+  ]
+},
+{
+  
+  "id": "6AKSJRbBARA6Bh2x7j",
+  "title": "The Book Of Mormon",
+  "description": "Sourced from predicthq.com",
+  "category": "performing-arts",
+  "labels": [
+    "entertainment",
+    "music",
+    "performing-arts"
+  ],
+  "rank": 41,
+  "local_rank": 48,
+  "phq_attendance": 367,
+  "entities": [
+    {
+      "entity_id": "TRVXYzxLPc7eFg8JADvXTB",
+      "name": "Prince of Wales Theatre",
+      "type": "venue",
+      "formatted_address": "Coventry Street, London W1D 6AS, United Kingdom"
+    }
+  ],
+  "duration": 0,
+  "start": "2025-01-16T19:30:00Z",
+  "start_local": "2025-01-16T19:30:00",
+  "end": "2025-01-16T19:30:00Z",
+  "end_local": "2025-01-16T19:30:00",
+  "predicted_end": "2025-01-16T21:40:00Z",
+  "predicted_end_local": "2025-01-16T21:40:00",
+  "updated": "2024-09-12T00:37:36Z",
+  "first_seen": "2024-09-12T00:28:35Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.1321102,
+    51.5102263
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.1321102,
+        51.5102263
+      ],
+      "type": "Point"
+    },
+    "placekey": "22x-222@4hq-8mp-k2k",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "Coventry Street, London W1D 6AS, United Kingdom",
+      "postcode": "W1D 6AS",
+      "locality": "London",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 367,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-15",
+          "value": 103,
+          "position": "leading"
+        },
+        {
+          "date_local": "2025-01-16",
+          "value": 367,
+          "position": "event_day"
+        },
+        {
+          "date_local": "2025-01-17",
+          "value": 4,
+          "position": "lagging"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 367,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 12525,
+  "predicted_event_spend_industries": {
+    "accommodation": 872,
+    "hospitality": 7086,
+    "transportation": 4566
+  },
+  "phq_labels": [
+    {
+      "label": "community-event",
+      "weight": 0.725
+    },
+    {
+      "label": "general-theatre",
+      "weight": 0.275
+    }
+  ]
+},
+{
+  
+  "id": "6nH5hNa2Qjtqhy8znh",
+  "title": "Back To The Future The Musical",
+  "description": "Sourced from predicthq.com",
+  "category": "performing-arts",
+  "labels": [
+    "entertainment",
+    "music",
+    "performing-arts"
+  ],
+  "rank": 44,
+  "local_rank": 51,
+  "phq_attendance": 475,
+  "entities": [
+    {
+      "entity_id": "32dxqSuLNAFS8JPN8awPVsU",
+      "name": "Adelphi Theatre",
+      "type": "venue",
+      "formatted_address": "409-412, 410 Strand, London WC2R 0NS, UK"
+    }
+  ],
+  "duration": 0,
+  "start": "2025-01-16T19:30:00Z",
+  "start_local": "2025-01-16T19:30:00",
+  "end": "2025-01-16T19:30:00Z",
+  "end_local": "2025-01-16T19:30:00",
+  "predicted_end": "2025-01-16T21:20:00Z",
+  "predicted_end_local": "2025-01-16T21:20:00",
+  "updated": "2024-09-15T00:44:53Z",
+  "first_seen": "2024-07-16T00:37:42Z",
+  "timezone": "Europe/London",
+  "location": [
+    -0.12288060000003043,
+    51.5100524
+  ],
+  "geo": {
+    "geometry": {
+      "coordinates": [
+        -0.12288060000003043,
+        51.5100524
+      ],
+      "type": "Point"
+    },
+    "placekey": "zzy-229@4hh-zvh-7t9",
+    "address": {
+      "country_code": "GB",
+      "formatted_address": "409-412, 410 Strand, London WC2R 0NS, UK",
+      "postcode": "WC2R 0NS",
+      "region": "England"
+    }
+  },
+  "impact_patterns": [
+    {
+      "vertical": "accommodation",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 475,
+          "position": "event_day"
+        }
+      ]
+    },
+    {
+      "vertical": "hospitality",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-15",
+          "value": 133,
+          "position": "leading"
+        },
+        {
+          "date_local": "2025-01-16",
+          "value": 475,
+          "position": "event_day"
+        },
+        {
+          "date_local": "2025-01-17",
+          "value": 5,
+          "position": "lagging"
+        }
+      ]
+    },
+    {
+      "vertical": "retail",
+      "impact_type": "phq_attendance",
+      "impacts": [
+        {
+          "date_local": "2025-01-16",
+          "value": 475,
+          "position": "event_day"
+        }
+      ]
+    }
+  ],
+  "scope": "locality",
+  "country": "GB",
+  "place_hierarchies": [
+    [
+      "6295630",
+      "6255148",
+      "2635167",
+      "6269131",
+      "2648110",
+      "2643743"
+    ]
+  ],
+  "state": "active",
+  "brand_safe": true,
+  "private": false,
+  "predicted_event_spend": 16212,
+  "predicted_event_spend_industries": {
+    "accommodation": 1129,
+    "hospitality": 9171,
+    "transportation": 5910
+  }
+}
+]

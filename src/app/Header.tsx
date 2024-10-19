@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from "@/features/hooks";
 import { qUpdate, qFinish } from "@/features/querySlice";
 import { eUpdate, eClear } from "@/features/eventSlice";
 import { useEffect } from "react";
+import results from "./results.json";
 
 export default function Header() {
   const query = useAppSelector((state) => state.query.value);
@@ -23,16 +24,16 @@ export default function Header() {
       dispatch(eClear());
       return;
     }
-    const data = await fetch(
-      "https://api.predicthq.com/v1/events/?saved_location.location_id=XW6x9BeMZeAv74Fxk79n5A&q=" + query,
-      {
-        headers: {
-          Authorization: "Bearer " + process.env.NEXT_PUBLIC_PREDICTHQ_API_KEY,
-        },
-      }
-    );
-    const json = await data.json();
-    dispatch(eUpdate(json.results));
+    // const data = await fetch(
+    //   "https://api.predicthq.com/v1/events/?saved_location.location_id=yoiyb0gPGMHUGkfX0M80Fw&q=" + query,
+    //   {
+    //     headers: {
+    //       Authorization: "Bearer " + process.env.NEXT_PUBLIC_PREDICTHQ_API_KEY,
+    //     },
+    //   }
+    // );
+    // const json = await data.json();
+    dispatch(eUpdate(results));
     dispatch(qFinish(true));
   }
 

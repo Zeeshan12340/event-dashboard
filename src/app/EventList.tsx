@@ -6,6 +6,7 @@ import BounceLoader from "react-spinners/BounceLoader";
 import EventModal from "./EventModal";
 import { convertToLocalTime, formatNumber } from "./utils";
 import EventFilter from "./EventFilter";
+import eventsCount from "./eventsCount.json";
 
 export default function EventList() {
   const [count, setCount] = useState(0);
@@ -16,13 +17,14 @@ export default function EventList() {
 
   useEffect(() => {
     function fetchEvents() {
-      fetch("https://api.predicthq.com/v1/events/count/?saved_location.location_id=XW6x9BeMZeAv74Fxk79n5A", {
-        headers: {
-          Authorization: "Bearer " + process.env.NEXT_PUBLIC_PREDICTHQ_API_KEY,
-        },
-      })
-        .then((data) => data.json())
-        .then((json) => setCount(json.count));
+      // fetch("https://api.predicthq.com/v1/events/count/?saved_location.location_id=yoiyb0gPGMHUGkfX0M80Fw", {
+      //   headers: {
+      //     Authorization: "Bearer " + process.env.NEXT_PUBLIC_PREDICTHQ_API_KEY,
+      //   },
+      // })
+      //   .then((data) => data.json())
+      //   .then((json) => setCount(json.count));
+      setCount(eventsCount.count);
     }
 
     fetchEvents();
@@ -85,7 +87,7 @@ export default function EventList() {
                   liked: boolean;
                   open: boolean;
                 },
-                index
+                index: number
               ) =>
                 page.likedEvents ? (
                   event.liked ? (
