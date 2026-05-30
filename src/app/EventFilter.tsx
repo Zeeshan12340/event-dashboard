@@ -4,12 +4,34 @@ import Popper, { PopperPlacementType } from "@mui/material/Popper";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
+import { useAppSelector, useAppDispatch } from "@/features/hooks";
+import { Event } from "@/features/eventSlice";
+import {
+  setCategory,
+  setDateFrom,
+  setDateTo,
+  clearFilters,
+} from "@/features/filterSlice";
+import { humanizeCategory } from "./utils";
 
 export default function EventFilter() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [placement, setPlacement] = React.useState<PopperPlacementType>();
   const open = Boolean(anchorEl);
-  const [categorySelect, setcategorySelect] = React.useState("Web Development");
+
+  const events = useAppSelector((state) => state.event.value);
+  const filter = useAppSelector((state) => state.filter);
+  const dispatch = useAppDispatch();
+
+  // Derive the category options from the loaded events so the filter always
+  // reflects the real data instead of a hardcoded list.
+  const categories = Array.from(
+    new Set(
+      events
+        .map((event: Event) => event.category)
+        .filter((category): category is string => Boolean(category))
+    )
+  ).sort();
 
   const handleClick = (newPlacement: PopperPlacementType) => (
     event: React.MouseEvent<HTMLElement>
@@ -19,7 +41,7 @@ export default function EventFilter() {
   };
 
   function handleChange(event: SelectChangeEvent) {
-    setcategorySelect(event.target.value);
+    dispatch(setCategory(event.target.value));
   }
 
   return (
@@ -60,14 +82,17 @@ export default function EventFilter() {
           <InputLabel>Category</InputLabel>
           <Select
             sx={{ bgcolor: "grey.300", padding: 0, margin: 0 }}
-            value={categorySelect}
+            value={filter.category}
             label="Category"
             onChange={handleChange}
             className="h-10"
           >
-            <MenuItem value={"Web Development"}>Web Development</MenuItem>
-            <MenuItem value={"Film"}>Film</MenuItem>
-            <MenuItem value={"Concert"}>Concert</MenuItem>
+            <MenuItem value={"all"}>All categories</MenuItem>
+            {categories.map((category) => (
+              <MenuItem key={category} value={category}>
+                {humanizeCategory(category)}
+              </MenuItem>
+            ))}
           </Select>
 
           <InputLabel className="mt-2">Date & Time</InputLabel>
@@ -76,6 +101,9 @@ export default function EventFilter() {
               <div>From</div>
               <input
                 type="date"
+                aria-label="Filter events from date"
+                value={filter.from}
+                onChange={(e) => dispatch(setDateFrom(e.target.value))}
                 className="h-10 w-48 border border-gray-300 rounded-md bg-gray-300 p-2"
               />
             </div>
@@ -83,10 +111,21 @@ export default function EventFilter() {
               <div>To</div>
               <input
                 type="date"
+                aria-label="Filter events to date"
+                value={filter.to}
+                onChange={(e) => dispatch(setDateTo(e.target.value))}
                 className="h-10 w-48 border border-gray-300 rounded-md bg-gray-300 p-2"
               />
             </div>
           </div>
+
+          <button
+            type="button"
+            onClick={() => dispatch(clearFilters())}
+            className="mt-4 text-sm text-[#5041bc] font-bold hover:underline"
+          >
+            Clear filters
+          </button>
         </Box>
       </Popper>
     </div>

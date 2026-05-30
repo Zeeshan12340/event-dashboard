@@ -14,7 +14,7 @@ export default function Home() {
         <Header />
         <div className="flex">
           <SideBar />
-          <div className="w-full mr-2">
+          <div className="w-full mr-2 flex flex-col min-h-0">
             <EventList />
           </div>
           <div>
