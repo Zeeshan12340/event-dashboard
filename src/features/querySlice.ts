@@ -5,12 +5,14 @@ import type { RootState } from "./store";
 export interface QueryState {
   value: string;
   finished: boolean;
+  error: string | null;
 }
 
 // Define the initial state using that type
 const initialState: QueryState = {
   value: "web development",
   finished: false,
+  error: null,
 };
 // as CounterState
 
@@ -26,11 +28,14 @@ export const querySlice = createSlice({
     },
     qFinish: (state, action: PayloadAction<boolean>) => {
       state.finished = action.payload;
-    }
+    },
+    qError: (state, action: PayloadAction<string | null>) => {
+      state.error = action.payload;
+    },
   },
 });
 
-export const { qUpdate, qClear, qFinish } = querySlice.actions;
+export const { qUpdate, qClear, qFinish, qError } = querySlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectQuery = (state: RootState) => state.query.value;

@@ -11,23 +11,23 @@ export interface entities {
   [key: number]: entity;
 }
 
-// Define a type for event
-// type Event = [
-//   {
-//     title: string;
-//     start: string;
-//     timezone: string;
-//     entities: entities;
-//     description: string;
-//     liked: boolean;
-//     open: boolean;
-//   }
-// ];
-type Event = any;
+// Define a type for an event.
+// `liked` and `open` are not present in the source data — they are added
+// at runtime by the reducers below — so they are optional.
+export interface Event {
+  title: string;
+  start: string;
+  timezone: string;
+  entities: entities;
+  description: string;
+  category?: string;
+  liked?: boolean;
+  open?: boolean;
+}
 
 // Define a type for the slice state
 export interface EventState {
-  value: Event;
+  value: Event[];
 }
 
 // Define the initial state using that type
@@ -50,7 +50,7 @@ export const eventSlice = createSlice({
   name: "event",
   initialState,
   reducers: {
-    eUpdate: (state, action: PayloadAction<Event>) => {
+    eUpdate: (state, action: PayloadAction<Event[]>) => {
       state.value = action.payload;
     },
     eLike: (state, action: PayloadAction<number>) => {

@@ -1,41 +1,55 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import Image from "next/image";
 import { useAppSelector, useAppDispatch } from "@/features/hooks";
-import { qUpdate, qFinish } from "@/features/querySlice";
+import { qUpdate, qFinish, qError } from "@/features/querySlice";
 import { eUpdate, eClear } from "@/features/eventSlice";
-import { useEffect } from "react";
-import results from "./results.json";
 
 export default function Header() {
   const query = useAppSelector((state) => state.query.value);
   const dispatch = useAppDispatch();
 
+  const searchEvents = useCallback(
+    async (e?: React.FormEvent<HTMLFormElement>) => {
+      e?.preventDefault();
+      dispatch(eClear());
+      dispatch(qError(null));
+      dispatch(qFinish(false));
+
+      if (!query) {
+        dispatch(qFinish(true));
+        dispatch(eClear());
+        return;
+      }
+
+      // The real PredictHQ request is proxied through /api/events so the API key
+      // stays server-side; that route also falls back to static sample data.
+      try {
+        const response = await fetch(
+          `/api/events?q=${encodeURIComponent(query)}`
+        );
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+        const json = await response.json();
+        dispatch(eUpdate(json.results));
+      } catch (error) {
+        dispatch(
+          qError(
+            error instanceof Error ? error.message : "Failed to load events"
+          )
+        );
+        dispatch(eClear());
+      } finally {
+        dispatch(qFinish(true));
+      }
+    },
+    [dispatch, query]
+  );
+
+  // Re-run the search only when the query changes, not on every render.
   useEffect(() => {
     searchEvents();
-  });
-
-  async function searchEvents(e?: React.FormEvent<HTMLFormElement>) {
-    e?.preventDefault();
-    dispatch(eClear());
-    dispatch(qFinish(false));
-
-    if (!query) {
-      dispatch(qFinish(true));
-      dispatch(eClear());
-      return;
-    }
-    // const data = await fetch(
-    //   "https://api.predicthq.com/v1/events/?saved_location.location_id=yoiyb0gPGMHUGkfX0M80Fw&q=" + query,
-    //   {
-    //     headers: {
-    //       Authorization: "Bearer " + process.env.NEXT_PUBLIC_PREDICTHQ_API_KEY,
-    //     },
-    //   }
-    // );
-    // const json = await data.json();
-    dispatch(eUpdate(results));
-    dispatch(qFinish(true));
-  }
+  }, [searchEvents]);
 
   return (
     <header className="flex p-4 text-white bg-white">
@@ -71,6 +85,7 @@ export default function Header() {
           <input
             type="search"
             id="default-search"
+            aria-label="Search events"
             className="block w-full p-3 ps-10 text-sm text-gray-900 rounded-full bg-search-bg"
             placeholder="Search events..."
             onChange={(e) => dispatch(qUpdate(e.target.value))}
