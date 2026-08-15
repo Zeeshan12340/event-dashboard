@@ -122,7 +122,7 @@ export default function EventList() {
           <div className="text-gray-500 text-sm mt-1">{error}</div>
         </div>
       ) : visibleEvents.length > 0 ? (
-        <div className="max-h-[44rem] overflow-auto">
+        <div className="flex-1 min-h-0 overflow-auto">
           {visibleEvents.map(({ event, index }) => (
             <EventRow key={index} event={event} index={index} />
           ))}
